@@ -1,0 +1,57 @@
+1]var fullWordList = ['1', '2', '3', '4', '5'];
+var wordsToRemove = ['1', '2', '3'];
+-->
+var duplicates = fullWordList.filter(function(value) {
+  return wordsToRemove.includes(value);
+});
+
+console.log("Duplicates:", duplicates);
+
+
+
+2]const word = '00000111110101001111100001001';
+
+-->
+  function longestChainOfLetters(word) {
+  let longestChain = '';
+  let currentChain = '';
+
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === '1') {
+      currentChain += '1';
+    } else {
+      if (currentChain.length > longestChain.length) {
+        longestChain = currentChain;
+      }
+      currentChain = '';
+    }
+  }
+
+  return longestChain;
+}
+
+const longestChain = longestChainOfLetters(word);
+console.log('Longest chain of letters:', longestChain);
+
+
+
+3]let obj1 = { "greeting": "hello" };
+let obj2 = obj1;
+obj1["greeting"] = "Bye";
+
+console.log(obj1);
+console.log(obj2);
+
+-->{ "greeting": "Bye" }
+{ "greeting": "Bye" }
+
+4]console.log("7" > 7); --> false
+  console.log("2" > "21");--> true
+console.log("KL" > "S");-->false
+  
+5]function average(a, b) {
+return a + b / 2;
+}
+console.log(average(2, 1));
+
+-->1.5
